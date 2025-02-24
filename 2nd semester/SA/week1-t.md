@@ -41,7 +41,7 @@ Uses a repeated structure to achieve encryption. The plaintext is divided into t
 3. (Permutation) The halves are swapped.
  This process is repeated for multiple rounds, at the end a last swap (permutation) is made to simplify decryption, after which the halves are recombined to produce the final ciphertext. This structure allows decryption by applying the same process in reverse, using the subkeys in reverse order.
 
-![[2nd semester/SA/images/w1t-1.png]]
+![](./images/w1t-1.png)
 
 The exact implementation depends on:
 - block size: larger results in higher security but in slower execution
@@ -74,7 +74,7 @@ Encrypts 64-bit blocks using a 56-bit key over 16 rounds based on the Feistel st
     - Left half (L) becomes the previous right half (R).
 3. **Final Permutation (FP)**: The final transformation produces the ciphertext.
 
-![[w1t-2.png]]
+![](./images/w1t-2.png)
 
 #### Double DES (2DES)
 Encrypts twice using two different keys.

@@ -19,4 +19,4 @@ Real-Time Systems (RTS) process data within strict time constraints to ensure ti
 - **Soft real-time systems**: Occasional timing failures are accepted.
 - **Mission-critical real-time systems**: Timing failures should be avoided, and occasional failures are handled as exceptional events.
 
-![[2nd semester/SCF/images/w1t-1.png]]
+![](./images/w1t-1.png)
