@@ -1,8 +1,6 @@
-# Week 1 Theory
+# Cryptography
 
-## Cryptography
-
-### Basics
+## Basics
 1. **Types of operations**
     - Substitution
     - Permutation
@@ -14,14 +12,14 @@
     - Block cipher (divides into chunks)
     - Stream cipher (processes character by character or bit by bit)
 
-### Symmetric Algorithms
+## Symmetric Algorithms
 **Kerckhoffs hypothesis** - Encryption/decryption algorithm details are public except for the key.
 
 **Attack methods:**
 - Quality of algorithm -> Cryptanalysis
 - Key size -> Brute-force
 
-### (Symmetric) Block Cipher
+## (Symmetric) Block Cipher
 Encrypts blocks of n bits into n bits.
 
 **Reversible transformation**: Decryption is possible; each plaintext block corresponds to a unique ciphertext block.
@@ -29,12 +27,12 @@ Encrypts blocks of n bits into n bits.
 
 An **ideal block cipher algorithm** would allow all possible reversible transformations, meaning (2^n)! transformations, where n is the block size in bits. In practice, only (2^k)! of (2^n)! are possible, where k is the key size in bits.
 
-#### Ciphers
+### Ciphers
 - **Substitution cipher**: Replaces one element with another (e.g., "aac" → "BBD").
 - **Permutation cipher**: Rearranges elements (e.g., "aac" → "CAA").
 - **Product cipher**: Combines multiple substitution and permutation operations to enhance security.
 - **Feistel cipher**: A structure that divides the plaintext into two halves, processes one half with a function and key, then swaps them iteratively to achieve encryption. Used in DES and other block ciphers.
-### Feistel Structure
+## Feistel Structure
 Uses a repeated structure to achieve encryption. The plaintext is divided into two halves (left and right). In each round:
 1. (Substitution) The right half is processed through a function (F) using a subkey.
 2. The result is XORed with the left half.
@@ -52,17 +50,17 @@ The exact implementation depends on:
 
 **Doesn't need a decryption function. The same encryption function can be used to decrypt it (XOR properties).**
 
-#### Principals for the Design
+### Principals for the Design
 - **Number of rounds:**
 	- should be chosen in a way that the cryptanalytic effort requires greater effort than brute-force key search
 - **Function F:**
 	- difficult to find out how to undo the substitution, e.g., should be non-linear
 	- changing 1 bit = 50% changing every bit
 
-### Data Encryption Standard (DES)
+## Data Encryption Standard (DES)
 Encrypts 64-bit blocks using a 56-bit key over 16 rounds based on the Feistel structure.
 
-#### DES Structure
+### DES Structure
 1. **Initial Permutation (IP)**: Rearranges the bits of the plaintext.
 2. **Feistel Rounds (16 rounds)**:
     - The 64-bit block is divided into two 32-bit halves (L and R).
@@ -76,7 +74,7 @@ Encrypts 64-bit blocks using a 56-bit key over 16 rounds based on the Feistel st
 
 ![](./images/w1t-2.png)
 
-#### Double DES (2DES)
+### Double DES (2DES)
 Encrypts twice using two different keys.
 - C=EK2(EK1(P))
 - P=DK1(DK2(C))
@@ -85,7 +83,7 @@ More resistant to brute-force attacks but vulnerable to the **Meet-in-the-Middle
 
 **Meet-in-the-Middle Attack** reduces complexity to 2^(k+1) encryptions and requires 2^k memory.
 
-#### Triple DES (3DES)
+### Triple DES (3DES)
 - **With Two Keys**: Uses encryption-decryption-encryption (EDE) sequence to improve security.
 	- C=EK1(DK2(EK1(P)))
 	- P=DK1(EK2(DK1(C)))

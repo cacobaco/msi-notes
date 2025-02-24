@@ -1,10 +1,7 @@
-# Week 1 Theory
+# Cloud Overview
 
-## Cloud Overview
-
-### Cloud
+## Cloud
 Unlike VPS, cloud services allow for scalable resource allocation and adjustments as needed.
-
 - Resources can be limited per project/user.
 - IT resources include:
     - Compute
@@ -13,15 +10,14 @@ Unlike VPS, cloud services allow for scalable resource allocation and adjustment
     - Database
     - Services
 
-### Cloud Computing
+## Cloud Computing
 Cloud computing is the delivery of computing resources over the internet.
-
 - Pay-per-use model, similar to utility bills (electricity/water).
 
-### Cloud Provider
+## Cloud Provider
 A company that owns and manages the physical resources for cloud computing.
 
-### Key Characteristics
+## Key Characteristics
 - Broad network access
 - Rapid elasticity (dynamic scaling based on demand)
 - Measured services (pay-as-you-go model)
@@ -31,7 +27,7 @@ A company that owns and manages the physical resources for cloud computing.
 
 **Scalability vs Elasticity**: Elasticity involves automatic, dynamic scaling during high traffic periods.
 
-### Examples of Cloud Computing
+## Examples of Cloud Computing
 - Scalable utilization
 - Chatbots (e.g., Siri)
 - Messaging and calling apps (e.g., WhatsApp)
@@ -43,16 +39,16 @@ A company that owns and manages the physical resources for cloud computing.
 - Big data analytics (e.g., Google BigQuery)
 - Social networking (e.g., LinkedIn)
 
-## Web APIs
+# Web APIs
 
-### Web Service
-**Definition pending.**
+## Web Service
+**TODO: Definition pending.**
 
-### Interservice Communication
+## Interservice Communication
 - Request/Response
 - Event-driven messaging
 
-### Remote Procedure Call (gRPC)
+## Remote Procedure Call (gRPC)
 - The "g" stands for Google.
 - gRPC is faster than REST.
 - Commonly used for communication between microservices.
